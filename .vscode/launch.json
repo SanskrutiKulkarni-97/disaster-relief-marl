@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "1. Rebuild results, figures and report (no training, ~1 min)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/run_all.py",
+            "args": ["--skip-training"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "2. Quick smoke test (300 episodes, 1 seed)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/run_all.py",
+            "args": ["--quick"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "3. Full experiment (train everything, 4000 episodes x 3 seeds)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/run_all.py",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}

@@ -1,0 +1,376 @@
+{
+ "noop": {
+  "reward": -646.241213278813,
+  "crit_unmet": 452.3610916325916,
+  "energy": 0.0,
+  "served": 0.0,
+  "dispatches": 0.0,
+  "completion": 0.0,
+  "length": 20.0
+ },
+ "random": {
+  "reward": -70.3194270737995,
+  "crit_unmet": 256.1573893440994,
+  "energy": 944.3833333333333,
+  "served": 471.6597360853436,
+  "dispatches": 12.0,
+  "completion": 0.03733333333333333,
+  "length": 4.593333333333334
+ },
+ "greedy_heuristic": {
+  "reward": 43.14590373129364,
+  "crit_unmet": 38.82773725620031,
+  "energy": 1236.65,
+  "served": 669.5568024845563,
+  "dispatches": 12.0,
+  "completion": 0.038,
+  "length": 4.0
+ },
+ "mappo_v1_stochastic": {
+  "reward": -66.66573586004365,
+  "crit_unmet": 247.34337154023305,
+  "energy": 948.9916666666667,
+  "served": 472.56261754406836,
+  "dispatches": 12.0,
+  "completion": 0.027925925925925927,
+  "length": 4.67111111111111,
+  "reward_std": 6.765742810982495,
+  "crit_unmet_std": 11.12081995312993,
+  "energy_std": 148.68863767020738,
+  "served_std": 49.56882410423104,
+  "dispatches_std": 0.0,
+  "completion_std": 0.011046230324847242,
+  "length_std": 0.08710714276675377,
+  "n_seeds": 3,
+  "per_seed": [
+   {
+    "reward": -73.47596601282326,
+    "crit_unmet": 259.6403595060697,
+    "energy": 739.9,
+    "served": 408.9655214488886,
+    "dispatches": 12.0,
+    "completion": 0.01288888888888889,
+    "length": 4.5633333333333335,
+    "run": "runs_v1_s123/mappo_model.pt"
+   },
+   {
+    "reward": -57.440097815211026,
+    "crit_unmet": 232.7038811569533,
+    "energy": 1072.85,
+    "served": 529.898579532965,
+    "dispatches": 12.0,
+    "completion": 0.03177777777777778,
+    "length": 4.673333333333333,
+    "run": "runs_v1_s42/mappo_model.pt"
+   },
+   {
+    "reward": -69.0811437520967,
+    "crit_unmet": 249.6858739576762,
+    "energy": 1034.225,
+    "served": 478.82375165035154,
+    "dispatches": 12.0,
+    "completion": 0.03911111111111112,
+    "length": 4.776666666666666,
+    "run": "runs_v1_s7/mappo_model.pt"
+   }
+  ]
+ },
+ "mappo_v1_argmax": {
+  "reward": -128.26451072846933,
+  "crit_unmet": 283.70232020036707,
+  "energy": 909.6416666666668,
+  "served": 360.1346707804423,
+  "dispatches": 12.0,
+  "completion": 0.021629629629629627,
+  "length": 6.466666666666666,
+  "reward_std": 9.473086687856624,
+  "crit_unmet_std": 10.621964737030577,
+  "energy_std": 182.29219942779292,
+  "served_std": 44.047255895438575,
+  "dispatches_std": 0.0,
+  "completion_std": 0.0110967808824614,
+  "length_std": 0.45108100611095814,
+  "n_seeds": 3,
+  "per_seed": [
+   {
+    "reward": -121.72480591033222,
+    "crit_unmet": 291.3441368253372,
+    "energy": 669.3,
+    "served": 316.91041396280986,
+    "dispatches": 12.0,
+    "completion": 0.009333333333333332,
+    "length": 5.8566666666666665,
+    "run": "runs_v1_s123/mappo_model.pt"
+   },
+   {
+    "reward": -121.40849266818094,
+    "crit_unmet": 268.681359150737,
+    "energy": 1110.575,
+    "served": 420.5925048051936,
+    "dispatches": 12.0,
+    "completion": 0.019333333333333334,
+    "length": 6.61,
+    "run": "runs_v1_s42/mappo_model.pt"
+   },
+   {
+    "reward": -141.66023360689485,
+    "crit_unmet": 291.081464625027,
+    "energy": 949.05,
+    "served": 342.90109357332346,
+    "dispatches": 12.0,
+    "completion": 0.036222222222222225,
+    "length": 6.933333333333334,
+    "run": "runs_v1_s7/mappo_model.pt"
+   }
+  ]
+ },
+ "mappo_v2_stochastic": {
+  "reward": -17.885698106650292,
+  "crit_unmet": 156.48447813388725,
+  "energy": 1194.5666666666666,
+  "served": 595.1040772417638,
+  "dispatches": 12.0,
+  "completion": 0.022074074074074076,
+  "length": 4.351111111111111,
+  "reward_std": 0.7447935818283579,
+  "crit_unmet_std": 2.2735715820616664,
+  "energy_std": 45.54808051816114,
+  "served_std": 5.1878671804042105,
+  "dispatches_std": 0.0,
+  "completion_std": 0.004566232594791835,
+  "length_std": 0.02586765939293965,
+  "n_seeds": 3,
+  "per_seed": [
+   {
+    "reward": -18.705271505101493,
+    "crit_unmet": 159.06921977383115,
+    "energy": 1200.625,
+    "served": 597.2200164746648,
+    "dispatches": 12.0,
+    "completion": 0.028,
+    "length": 4.383333333333334,
+    "run": "runs_v2_s123/mappo_model.pt"
+   },
+   {
+    "reward": -16.902936012915962,
+    "crit_unmet": 153.53589941658095,
+    "energy": 1247.075,
+    "served": 600.1299427393079,
+    "dispatches": 12.0,
+    "completion": 0.021333333333333336,
+    "length": 4.32,
+    "run": "runs_v2_s42/mappo_model.pt"
+   },
+   {
+    "reward": -18.04888680193342,
+    "crit_unmet": 156.84831521124963,
+    "energy": 1136.0,
+    "served": 587.9622725113185,
+    "dispatches": 12.0,
+    "completion": 0.016888888888888887,
+    "length": 4.35,
+    "run": "runs_v2_s7/mappo_model.pt"
+   }
+  ]
+ },
+ "mappo_v2_argmax": {
+  "reward": -47.97352308841684,
+  "crit_unmet": 169.8303578990849,
+  "energy": 1268.5,
+  "served": 499.0598783151154,
+  "dispatches": 12.0,
+  "completion": 0.01037037037037037,
+  "length": 5.7811111111111115,
+  "reward_std": 7.232386275954994,
+  "crit_unmet_std": 12.229920418499704,
+  "energy_std": 83.21683523582634,
+  "served_std": 8.124336496242792,
+  "dispatches_std": 0.0,
+  "completion_std": 0.001031732464976601,
+  "length_std": 0.08866638819226681,
+  "n_seeds": 3,
+  "per_seed": [
+   {
+    "reward": -56.13983256160621,
+    "crit_unmet": 185.3267296868398,
+    "energy": 1226.25,
+    "served": 494.4653777458159,
+    "dispatches": 12.0,
+    "completion": 0.009333333333333334,
+    "length": 5.8566666666666665,
+    "run": "runs_v2_s123/mappo_model.pt"
+   },
+   {
+    "reward": -49.22372180513897,
+    "crit_unmet": 168.73448560470115,
+    "energy": 1384.75,
+    "served": 492.2370853627348,
+    "dispatches": 12.0,
+    "completion": 0.011777777777777778,
+    "length": 5.83,
+    "run": "runs_v2_s42/mappo_model.pt"
+   },
+   {
+    "reward": -38.557014898505344,
+    "crit_unmet": 155.4298584057137,
+    "energy": 1194.5,
+    "served": 510.47717183679555,
+    "dispatches": 12.0,
+    "completion": 0.01,
+    "length": 5.656666666666666,
+    "run": "runs_v2_s7/mappo_model.pt"
+   }
+  ]
+ },
+ "grad_diag_v1": {
+  "actor_grad_pre": 1.3678230047225952,
+  "critic_grad_pre": 236.1264877319336,
+  "ratio": 163.28826120233026,
+  "actor_grad_post_clip": 0.003063218319796895,
+  "shrink_factor": 472.26420152068056,
+  "critic_loss": 969.5833740234375
+ },
+ "capacity": {
+  "initial_demand_mean": 1449.1521722535108,
+  "max_deliverable": 720.0
+ },
+ "comparison": {
+  "qlearning_greedy": {
+   "reward": -218.1192870898138,
+   "crit_unmet": 261.7331011509354,
+   "energy": 830.9833333333332,
+   "served": 403.1264354871757,
+   "completion": 0.011259259259259259,
+   "length": 11.004444444444445,
+   "reward_std": 12.643746567691872,
+   "crit_unmet_std": 4.215176873255147,
+   "energy_std": 6.131385560286384,
+   "served_std": 2.5875579603191543,
+   "completion_std": 0.0007554102983100416,
+   "length_std": 0.25021965658838585
+  },
+  "qlearning_states": 13172.333333333334,
+  "qlearning_unseen": 0.17819172569623867,
+  "qlearning_conv": [
+   null,
+   null,
+   null
+  ],
+  "sarsa_greedy": {
+   "reward": -223.27408832328038,
+   "crit_unmet": 266.0112733576825,
+   "energy": 834.1277777777777,
+   "served": 405.65975336285425,
+   "completion": 0.011185185185185187,
+   "length": 10.953333333333333,
+   "reward_std": 3.4641527697973156,
+   "crit_unmet_std": 2.6680359581887023,
+   "energy_std": 7.277315506947232,
+   "served_std": 5.037423382771567,
+   "completion_std": 0.001510820596620085,
+   "length_std": 0.23280893453645643
+  },
+  "sarsa_states": 13239.333333333334,
+  "sarsa_unseen": 0.18488515348000503,
+  "sarsa_conv": [
+   null,
+   null,
+   null
+  ],
+  "dqn_greedy": {
+   "reward": -46.22489289298972,
+   "crit_unmet": 174.40121517360123,
+   "energy": 1182.2583333333332,
+   "served": 566.0495699007485,
+   "completion": 0.01074074074074074,
+   "length": 5.792222222222222,
+   "reward_std": 12.593251910456475,
+   "crit_unmet_std": 18.850466720153165,
+   "energy_std": 42.87937214507174,
+   "served_std": 8.779715162579995,
+   "completion_std": 0.004460464953281361,
+   "length_std": 0.2698330530961873
+  },
+  "dqn_conv": [
+   2783,
+   3813,
+   2731
+  ],
+  "ppo_greedy": {
+   "reward": -98.40553681556959,
+   "crit_unmet": 215.80040828940545,
+   "energy": 1309.425,
+   "served": 438.5611682274404,
+   "completion": 0.00977777777777778,
+   "length": 6.741111111111111,
+   "reward_std": 14.58542688475064,
+   "crit_unmet_std": 11.80785038056343,
+   "energy_std": 92.74148433504105,
+   "served_std": 6.349151407982718,
+   "completion_std": 0.0006285393610547097,
+   "length_std": 0.2217160902852071
+  },
+  "ppo_stochastic": {
+   "reward": -31.466707728588023,
+   "crit_unmet": 169.7454023892752,
+   "energy": 1218.533333333333,
+   "served": 574.4047060184695,
+   "completion": 0.022222222222222223,
+   "length": 4.757777777777778,
+   "reward_std": 5.269028684262535,
+   "crit_unmet_std": 7.902308999484892,
+   "energy_std": 68.2915146429058,
+   "served_std": 14.152029760309487,
+   "completion_std": 0.0008314794192830974,
+   "length_std": 0.02997941680718228
+  },
+  "ppo_conv": [
+   2168,
+   2357,
+   2419
+  ],
+  "mppo_greedy": {
+   "reward": -62.697689253430774,
+   "crit_unmet": 182.23944558225966,
+   "energy": 1203.8666666666666,
+   "served": 464.46375187106577,
+   "completion": 0.01311111111111111,
+   "length": 6.167777777777778,
+   "reward_std": 37.746043132864195,
+   "crit_unmet_std": 39.46405726737529,
+   "energy_std": 100.77795380053227,
+   "served_std": 77.61005228661867,
+   "completion_std": 0.0025724082006200505,
+   "length_std": 0.7318183003255371
+  },
+  "mppo_stochastic": {
+   "reward": -19.28633678246366,
+   "crit_unmet": 156.7293079874156,
+   "energy": 1153.2833333333333,
+   "served": 578.2934300406329,
+   "completion": 0.023037037037037036,
+   "length": 4.398888888888888,
+   "reward_std": 5.413395318338426,
+   "crit_unmet_std": 9.33539972617111,
+   "energy_std": 42.202889579848524,
+   "served_std": 12.211458063472351,
+   "completion_std": 0.00518730115555899,
+   "length_std": 0.09397924646129092
+  },
+  "mppo_conv": [
+   259,
+   563,
+   436
+  ],
+  "mappo_v2_conv": [
+   139,
+   226,
+   219
+  ],
+  "mappo_v1_conv": [
+   1698,
+   3705,
+   2857
+  ]
+ }
+}
