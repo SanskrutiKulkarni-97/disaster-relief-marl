@@ -1,11 +1,50 @@
 # AI Disaster Relief Supply Chain Optimization
 
-Multi-agent reinforcement learning for disaster-relief supply allocation:
-three warehouses dispatch water, food and medicine to five affected zones
-under stochastic demand, road failures, limited vehicles and humanitarian
-priorities. The project compares Q-Learning, SARSA, DQN, PPO, action-masked
-PPO and MAPPO on the same environment and reward, and contains the code,
-the trained results and the final IEEE report.
+**Multi-agent reinforcement learning for disaster-relief logistics.** Three warehouses
+dispatch water, food and medicine to five disaster zones under growing demand, roads
+that fail mid-episode, limited trucks and humanitarian priority levels. Six RL
+algorithms are compared on the same environment, reward and training budget
+(3 seeds each, evaluated on 300 unseen scenarios).
+
+<p align="center">
+  <img src="assets/results.png" width="48%" alt="Unmet critical demand by method: a priority-greedy rule leaves 39 units unmet, MAPPO 156, random actions 256">
+  <img src="assets/training.png" width="48%" alt="Training curves: corrected MAPPO, masked PPO, PPO and DQN improve while the original MAPPO stays flat">
+</p>
+
+## Key findings
+
+- **MAPPO is the best learned policy**: it leaves 39% less critical-zone demand unmet than random dispatching.
+- **Action masking matters most**: blocking impossible actions made PPO reach the reward threshold 5.5× sooner and improved its final reward from −31.5 to −19.3.
+- **The centralized critic adds stability**: MAPPO matches masked PPO's final score with a 7× smaller spread across seeds and learns about twice as fast.
+- **Tabular Q-Learning and SARSA do worse than random**: their discretized state cannot represent demand.
+- **A simple rule still wins**: "serve critical zones first" beats every RL agent, a reminder to always benchmark against a strong heuristic.
+- **Debugging story**: the first MAPPO version learned nothing because the actor and critic shared one gradient clip. The critic's gradients were ~160× larger, which shrank policy updates ~470×. Separate optimizers and value normalization fixed it.
+
+## Results
+
+| Method | Unmet critical demand ↓ | Episode reward ↑ | Episodes to reach −50 reward ↓ |
+|---|---|---|---|
+| Priority-greedy rule (hand-written baseline) | 38.8 | 43.1 | – |
+| **MAPPO** (masked, centralized critic) | 156.5 ± 2.3 | −17.9 ± 0.7 | 195 |
+| Action-masked PPO | 156.7 ± 9.3 | −19.3 ± 5.4 | 419 |
+| PPO | 169.7 ± 7.9 | −31.5 ± 5.3 | 2315 |
+| DQN | 174.4 ± 18.9 | −46.2 ± 12.6 | 3109 |
+| Random feasible actions | 256.2 | −70.3 | – |
+| Q-Learning | 261.7 ± 4.2 | −218.1 ± 12.6 | not reached |
+| SARSA | 266.0 ± 2.7 | −223.3 ± 3.5 | not reached |
+
+Learned policies: mean ± std across 3 training seeds. Policy-gradient methods are evaluated by sampling from the policy, DQN and the tabular methods greedily.
+
+## Environment
+
+| | |
+|---|---|
+| Agents | 3 warehouses (shared policy, each acts on its own local view) |
+| Zones | 5, each with priority critical / high / normal |
+| Commodities | water, food, medicine |
+| Actions | 31 per agent: commodity × zone × quantity (30 or 60), or wait |
+| Uncertainty | Poisson demand growth every step, random permanent road failures |
+| Reward | priority-weighted delivery − transport cost − penalty on unmet critical demand |
 
 ## Setup (VS Code, Windows / macOS / Linux)
 
